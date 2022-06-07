@@ -60,6 +60,25 @@ float toGP(int g)
 // ==============================================
 // -----^^----- 不得修改『以上』的程式 -----^^-----
 // ==============================================
+int main() 
+{
+    int g, n; //g 單科積分 ; n 學分數
+    float gpa = 0;
+    float tpa = 0;
+    int pot = 0;
 
+    while(cin >> g){
+        cin >> n;
+
+        tpa += toGP(g) * n;
+        pot += n;
+        cout << setw(5) << left << toLG(g);
+        cout << setw(5) << n;
+    }
+    gpa = tpa / pot;
+    cout << setw(5) << fixed << setprecision(2) << gpa << endl;
+
+    return 0;
+}
 // 1. 你所寫的程式碼只能在這個段落以下。
 // 2. 請依照題目說明完成欠缺的程式碼。
